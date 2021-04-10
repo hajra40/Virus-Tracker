@@ -1,0 +1,49 @@
+.container {
+    max-width: 960px;
+    margin: 2rem auto;
+}
+
+.navbar , .navbar__brand , .navbar__menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.virus, span {
+    color: #074D5A;
+}
+
+.virus {
+    font-size: 3rem;
+
+}
+
+span {
+    font-size: 2rem;
+    padding: auto 0.5rem;
+}
+
+.menu__item {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 1rem;
+    color: #074D5A;
+    text-decoration: none;
+}
+
+.menu__item:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+
+    .navbar {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu__item {
+        display: none;
+    }
+}

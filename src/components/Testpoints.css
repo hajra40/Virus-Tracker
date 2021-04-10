@@ -1,0 +1,10 @@
+.location {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.all_lts {
+    margin: auto auto 2rem auto;
+}

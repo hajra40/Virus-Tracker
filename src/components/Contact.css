@@ -1,0 +1,46 @@
+.contact {
+    min-height: 75vh;
+    max-width: 700px;
+    margin: 2rem auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 1rem 0rem;
+}
+
+.form__field {
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    padding: 0.5rem 0.6rem;
+
+}
+
+.form__field > input ,
+.form__field > textarea{
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+    padding: 0.5rem 0rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    background: rgb(230, 230, 230);
+    width: 100%;
+}
+
+.btn {
+    background: #074D5A;
+    outline: none;
+    border: none;
+    padding: 0.9rem;
+    font-size: 1.5rem;
+    color: #fff;
+    border-radius: 10px;
+}
