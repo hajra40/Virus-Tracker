@@ -9,30 +9,41 @@ import Card from './CasesCard'
 
 const CoronaPage = () => {
     const [data , setData] = useState({});
-    const [country , setCountry] = useState('');
+    const [country , setCountry] = useState('Bahrain');
+    const [confirmed , setConfirmed] = useState('')
+    const [deaths , setdeaths] = useState('')
+    const [recovered , setRecovered] = useState('')
+    const [update , setUpdate] = useState('')
   
     useEffect(async () => {
-      const res = await fetchData();
-  
-      setData({res})
+      const data = await fetchData(country);
+      
+        setConfirmed(data.confirmed.value)
+        setdeaths(data.deaths.value)
+        setRecovered(data.recovered.value)
+        setUpdate(data.lastUpdate)
+        setCountry(country)
+        setData({data})
     } , [])
+
+    // console.log(data , country)
   
     const handleCountryChange = async (country) => {
-      const d = await fetchData(country);
-      console.log(country,d)
-      setCountry(country);
-      setData({d})
+      const data = await fetchData(country);
+      setConfirmed(data.confirmed.value)
+      setdeaths(data.deaths.value)
+      setRecovered(data.recovered.value)
+      setUpdate(data.lastUpdate)
+      setCountry(country)
+      setData({data})
     }
 
-
+    // console.log(data.confirmed.value)
     return (
       <div>
-        {/* <img className={styles.image} src={image} alt="COVID-19" /> */}
-        {/* <Cards data={data} /> */}
-        
+        <h1>Corona Tracker</h1>
         <CountryPicker handleCountryChange={handleCountryChange} />
-        <Card data={data} country={country} />
-        {/* <Chart data={data} country={country} />  */}
+        <Card confirmed={confirmed} deaths={deaths} recovered={recovered} update={update} country={country} />
       </div>
     );
 }

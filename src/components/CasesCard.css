@@ -1,0 +1,35 @@
+.all_cases {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.confirmed,
+.deaths,
+.recovered {
+    width: 260px;
+    height: 260px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.confirmed > h2 , 
+.deaths > h2,
+.recovered > h2 {
+    color: #fff;
+}
+
+.confirmed {
+    background: green;
+}
+
+.deaths {
+    background: red;
+}
+
+.recovered {
+    background: #333;
+}
